@@ -25,7 +25,7 @@ app.use(session({
     resave: false,
     store: new MongoStore({
         mongoUrl: 'mongodb://127.0.0.1:27017/accountDB',
-        
+        ttl: 14 * 24 * 60 * 60   
     })
 }));
 
@@ -61,7 +61,7 @@ passport.use(Account.createStrategy());
 
 
 passport.serializeUser((user, done) => {
-    console.log(user._id)
+    //console.log(user._id)
     done(null, user._id);
   });
   
@@ -73,7 +73,7 @@ passport.deserializeUser((async (id, done) => {
       let localUser = await Account.findById(id, "name email _id");
 
       if(localUser){
-        console.log(localUser)
+        //console.log(localUser)
        done(null, localUser);
       }
       if(googleUser){
@@ -149,8 +149,7 @@ app.route('/register')
                     passport.authenticate('local')(req,res, ()=>{
                     res.redirect('/secrets');
                     });
-                }
-                }) 
+                }    }) 
         }
     })
     
@@ -213,12 +212,9 @@ app.get('/logout', (req,res)=>{
     req.logOut(err=>{
         if(err){
           console.log(err);
-        }
-        else{
-          res.redirect('/');
-        }
-    });
-    
+        }}
+    );
+    res.redirect('/');
 });
 
 app.route('/submit')
