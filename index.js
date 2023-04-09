@@ -4,8 +4,9 @@ const session = require('express-session');
 const MongoStore = require('connect-mongo');
 const bodyParser = require('body-parser');
 
-const AuthRoute = require("./routes/AuthRoutes");
+const Route = require("./routes/Routes");
 const passport = require("./services/passport");
+
 
 const { URI, SECRET } = require("./config");
 
@@ -23,19 +24,18 @@ app.use(session({
     saveUninitialized: true,
     resave: false,
     store: new MongoStore({
-        mongoUrl: URI,
-        ttl: 14 * 24 * 60 * 60   
+        mongoUrl: URI
     })
 }));
 
 app.use(passport.initialize());
 app.use(passport.session());
 
-app.use(AuthRoute);
+app.use(Route);
+
+
 
 mongoose.connect(URI);
-
-
 
 
 

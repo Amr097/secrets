@@ -1,30 +1,31 @@
 const express = require('express');
 const passport=require('passport');
 
-const app = express();
 const {
-    homeRenderController,
-    registerRenderController,
+  homeRenderController,
+  registerRenderController,
+  loginRenderController,
+  submitRenderController,
     localRegisterController,
     authGoogleController,
     authFacebookController,
-    loginRenderController,
     userLoginController,
     secretsAuthController,
     logoutController,
-    submitRenderController,
     submitSecretController
-  } = require("../controllers/AuthControllers");
+  } = require("../controllers/Controllers");
 
 const router = express.Router();
 
+
 router.get('/', homeRenderController);
 
+router.get('/register', registerRenderController);
+
+router.get('/login', loginRenderController);
 
 
-router.get('/register', registerRenderController)
-
-router.post('/register', localRegisterController)
+router.post('/register', localRegisterController);
     
 router.get('/auth/google', 
 passport.authenticate('google', {scope:['profile']}));
@@ -43,19 +44,18 @@ router.get('/auth/facebook/secrets',
 
 
 
-router.get('/login', loginRenderController)
-
 router.post('/login', userLoginController);
 
 router.get('/secrets', secretsAuthController);
 
+router.get('/submit', submitRenderController);
+
+router.post('/submit', submitSecretController);
 
 router.get('/logout', logoutController);
 
 
-router.get('/submit', submitRenderController)
 
-router.post(submitSecretController)
-;
+
 
 module.exports = router;

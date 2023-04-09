@@ -1,10 +1,9 @@
 const passport= require('passport');
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const FacebookStrategy = require('passport-facebook').Strategy;
-const passportLocalMongoose = require('passport-local-mongoose');
-const findOrCreate = require('mongoose-findorcreate');
 
-const {Account, googleAccount, facebookAccount} = require("../models/User");
+
+const {Account} = require("../models/User");
 
 const {
   CLIENT_ID,
@@ -28,20 +27,13 @@ passport.serializeUser((user, done) => {
   
 passport.deserializeUser((async (id, done) => {
     try {
-      console.log(id)
-      let googleUser = await googleAccount.findById(id, "name email _id");
-      let facebookUser = await facebookAccount.findById(id, "name email _id" );
-      let localUser = await Account.findById(id, "name email _id");
+      //console.log(id)
+      
+      let User = await Account.findById(id, "name email _id");
 
-      if(localUser){
+      if(User){
         //console.log(localUser)
-       done(null, localUser);
-      }
-      if(googleUser){
-      done(null, googleUser);
-      }
-      if(facebookAccount){
-        done(null, facebookUser);
+       done(null, User);
       }
       else {
         return done(new Error('user not found'));
@@ -60,7 +52,7 @@ passport.deserializeUser((async (id, done) => {
   },
   function(accessToken, refreshToken, profile, cb) {
     //console.log(profile);
-    googleAccount.findOrCreate({ googleId: profile.id, username: profile.displayName }, function (err, user) {
+    Account.findOrCreate({ googleId: profile.id, username: profile.displayName }, function (err, user) {
       return cb(err, user);
     });
   }
@@ -73,7 +65,7 @@ passport.deserializeUser((async (id, done) => {
   },
   function(accessToken, refreshToken, profile, cb) {
     //console.log(profile);
-    facebookAccount.findOrCreate({ facebookId: profile.id }, function (err, user) {
+   Account.findOrCreate({ facebookId: profile.id }, function (err, user) {
       return cb(err, user);
     });
   }
