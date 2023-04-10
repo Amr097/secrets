@@ -2,7 +2,7 @@
 
 ## Summary
 
-Share your secrets anonyomusly app as a part of Authentication and Security with diffferent levels tutorial using passport, mongoose, sessions, cookies, OAuth .
+Share your secrets anonyomusly app is a part of Authentication and Security tutorial using passport, mongoose, sessions, cookies, OAuth .
 
 ## Installation
 
