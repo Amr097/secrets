@@ -9,7 +9,7 @@ Share your secrets anonyomusly app as a part of Authentication and Security with
 To run the application:
 
  1. Download the GitHub zip file or clone the repository onto your local workstation:
-    - zip file https://github.com/Amr097/secrets/archive/master.zip
+    - [zip file](https://github.com/Amr097/secrets/archive/master.zip)
     - https://github.com/Amr097/secrets.git
     
  2. In your terminal cd to the file location, install dependencies and type `node index.js` command to start the server at port 3000.
