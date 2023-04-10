@@ -24,4 +24,4 @@ You can Register by inputing your mail and password or sign in using either goog
 
 ### 2. Submit a secret anonymously
 ![sharesecrets](https://user-images.githubusercontent.com/107508295/181660841-c943ede1-854e-48ad-afad-50880c5a6dc0.PNG)
-![secretssubmission](https://user-images.githubusercontent.com/107508295/181660876-b4e5d085-4234-400e-91ec-a20e89b581e8.PNG)
+
