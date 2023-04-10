@@ -19,10 +19,8 @@ To run the application:
  ## Features
 
 ### 1. Registration Page
-![reg](https://user-images.githubusercontent.com/107508295/181660005-aa732ea7-7565-4f07-b3ed-0e4395cd3e42.PNG)
 
-* You can Register by just inputing your mail and password.
-*Or you can sign in using either google or facebook.
+You can Register by inputing your mail and password or sign in using either google or facebook.
 
 ### 2. Submit a secret anonymously
 ![sharesecrets](https://user-images.githubusercontent.com/107508295/181660841-c943ede1-854e-48ad-afad-50880c5a6dc0.PNG)
