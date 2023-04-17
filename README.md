@@ -13,7 +13,7 @@ To run the application:
     - https://github.com/Amr097/secrets.git
     
  2. In your terminal cd to the file location, install these packages 
- `npm i body-parser connect-mongo dotenv ejs express express-session mongodb mongoose mongoose-findorcreate passport passport-facebook passport-google-oauth20 passport-   local-mongoose router session` 
+`npm i body-parser connect-mongo dotenv ejs express express-session mongodb mongoose mongoose-findorcreate passport passport-facebook passport-google-oauth20 passport-local-mongoose router session` 
   and run `node index.js` command to start the server at port 3000.
  
  3. The server should now be running at http://localhost:3000/, you may now navigate the app.
