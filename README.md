@@ -31,6 +31,33 @@ Safely register to the app, the user's password is saved hashed and salted to th
 
 
 ##Directories
-─config                                                                                                              │       dev.js                                                                                                          │       index.js                                                                                                        │       prod.js                                                                                                         │                                                                                                                       ├───controllers                                                                                                         │       Controllers.js                                                                                                  │                                                                                                                       ├───models                                                                                                              │       User.js                                                                                                         │                                                                                                                       ├───public                                                                                                              │   └───css                                                                                                             │           styles.css                                                                                                  │                                                                                                                       ├───routes                                                                                                              │       Routes.js                                                                                                       │                                                                                                                       ├───services                                                                                                            │       passport.js                                                                                                     │                                                                                                                       └───views                                                                                                                   │   home.ejs                                                                                                            │   login.ejs                                                                                                           │   register.ejs                                                                                                        │   secrets.ejs                                                                                                         │   submit.ejs                                                                                                          │                                                                                                                       └───partials                                                                                                                    footer.ejs                                                                                                              header.ejs  
 
+├───config
+│       dev.js
+│       index.js
+│       prod.js
+├───controllers                                                                                                         
+│       Controllers.js├───models
+│       User.js
+│
+├───public
+│   └───css
+│           styles.css
+│
+├───routes
+│       Routes.js
+│
+├───services
+│       passport.js
+└───views                                                                                                                   
+    │   home.ejs                                                                                                            
+    │   login.ejs                                                                                                           
+    │   register.ejs                                                                                                        
+    │   secrets.ejs                                                                                                         
+    │   submit.ejs                                                                                                          
+    │                                                                                                                       
+    └───partials                                                                                                                    
+            footer.ejs                                                                                                         
+            header.ejs
+ 
 
