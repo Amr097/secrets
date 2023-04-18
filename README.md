@@ -37,7 +37,8 @@ Safely register to the app, the user's password is saved hashed and salted to th
 │       index.js
 │       prod.js
 ├───controllers                                                                                                         
-│       Controllers.js├───models
+│       Controllers.js
+├───models
 │       User.js
 │
 ├───public
