@@ -32,5 +32,4 @@ Safely register to the app, the user's password is saved hashed and salted to th
 
 ##Directories
 
-![directorytree](https://user-images.githubusercontent.com/127849429/232842143-33577623-9cfe-473f-81f3-52cd62844b7a.png)
-
+![directorytree](https://user-images.githubusercontent.com/127849429/232842298-651d1247-3174-455f-82d6-dc4d864629e6.png)
